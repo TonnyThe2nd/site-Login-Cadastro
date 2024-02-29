@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title>Meu site</title>
+        <style>
+            body{
+                position: relative;
+                margin: 0;
+            }
+            #form{
+                position: absolute;
+                top: 10%;
+                right: 1px;
+                border: 3px solid black;
+                border-radius: 8px;
+                background-color: aquamarine;
+                width: 600px;
+                padding: 10px;
+                box-shadow: 5px 5px 5px black;
+                height: 600px;
+            }
+            form{
+                padding: 25%;
+                text-align: center;
+                justify-content: center;
+                display: block;
+                align-items: center;
+                
+            }
+            #login{
+                font-size: 20px;
+                height: 50px;
+                width: 130px;
+                border-radius: 8px;
+                font-weight: bolder;
+                cursor: pointer;
+                margin-top: 25%;
+                align-items: center;
+            }
+            #circle1{
+                top: 20%;
+                left: -250px;
+                position: absolute;
+                background-color: aquamarine;
+                border: 2px solid rgb(91, 183, 152);
+                border-radius: 50%;
+                width: 400px;
+                height: 400px;
+            }
+            #circle2{
+                top: 5%;
+                left: 120px;
+                position: absolute;
+                background-color: aquamarine;
+                border: 2px solid rgb(91, 183, 152);
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+            }    
+            #circle3{
+                top: 50%;
+                left: 200px;
+                position: absolute;
+                background-color: aquamarine;
+                border: 2px solid rgb(91, 183, 152);
+                border-radius: 50%;
+                width: 300px;
+                height: 300px;
+            }
+            #circle1_blue{
+                top: 73%;
+                left: -50px;
+                position: absolute;
+                background-color: rgb(127, 193, 255);
+                border: 2px solid rgb(101, 153, 202);
+                border-radius: 50%;
+                width: 250px;
+                height: 250px;
+            }
+
+            #circle2_blue{
+                top: 35%;
+                left: 230px;
+                position: absolute;
+                background-color: rgb(127, 193, 255);
+                border: 2px solid rgb(101, 153, 202);
+                border-radius: 50%;
+                width: 70px;
+                height: 70px;
+            }
+            #circle3_blue{
+                top: 3%;
+                left: 2px;
+                position: absolute;
+                background-color: rgb(127, 193, 255);
+                border: 2px solid rgb(101, 153, 202);
+                border-radius: 50%;
+                width: 110px;
+                height: 110px;
+            }
+            #geral{
+                width: 50%;
+                background-color: rgb(161, 251, 221);
+                height: 110vh;
+                background-size: cover;
+                filter: blur(10px);
+                
+            }
+            #int{
+                color: antiquewhite;
+                position: absolute;
+                top: 15%;
+                left: 30%;
+                font-size: 7rem;
+                -webkit-text-stroke: 3px #000000;
+                }
+            #fname, #fsenha{
+                font-weight: bold;
+                font-size: 30px;
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="geral"></div>
+        <div id="circle1"></div>
+        <div id="circle2"></div>
+        <div id="circle3"></div>
+        <div id="circle1_blue"></div>
+        <div id="circle2_blue"></div>
+        <div id="circle3_blue"></div>
+        <h1 id="int">Bem vindo</h1>
+        <div id="form">
+            <form action="/login.html" method="post">
+                <label for="fname", id="fname">
+                    E-Mail:
+                </label>
+                <input type="text" name="femail"  placeholder="E-mail:" style="font-size: 30px;">
+                <br><br><br>
+                <label for="fsenha" id="fname">
+                    Senha:
+                </label>
+                <input type="password" name="fsenha"  placeholder="Senha:" style="font-size: 30px;">
+                <br>
+                <input type="submit" name="" id="login" value="Entrar">
+                <br>
+                <br>
+                <a href="cadastro.html" id="cad" style="font-size: 20px;">Não possui conta? Cadastre-se</a> 
+
+                {% if texto_aviso %}
+                    <h3 style="color: red;"> {{ texto_aviso }} </h3>
+                {% endif %}
+                {% if texto_aviso_2 %}
+                    <h3 style="color: red;"> {{ texto_aviso_2 }} </h3>
+                {% endif %}
+            </form>
+    </body>
+</html>
